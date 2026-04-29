@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Technologies | Premium Tech Institute</title>
+    <meta
+      name="description"
+      content="Modern Technologies, Tirunelveli Town - premium training institute for courses, internships, and projects."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <p>Modern Technologies</p>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="bg-orbs">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="orb orb-4"></span>
+    </div>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+          <img src="images/logo/logo%20image.jpg" alt="Modern Technologies Logo" class="brand-logo me-2" />
+          Modern Technologies
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#internship">Internship</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-carousel-wrap">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3800">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/gallery/image-2.jpg" class="d-block w-100" alt="Modern Technologies learning space" />
+            <div class="carousel-caption glass-panel">
+              <h3>Future-Ready Tech Training</h3>
+              <p>Premium classrooms, real mentors, and project-first learning.</p>
+              <a href="#courses" class="btn btn-primary btn-premium btn-sm">Explore Programs</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/projects/malar-software-solutions-scad-viva-1.jpg" class="d-block w-100" alt="Project showcase" />
+            <div class="carousel-caption glass-panel">
+              <h3>Build Portfolio-Grade Projects</h3>
+              <p>Hands-on execution, code reviews, and industry-aligned outcomes.</p>
+              <a href="#projects" class="btn btn-primary btn-premium btn-sm">View Projects</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/internship/malar-software-solutions-tirunelveli-internship.jpg" class="d-block w-100" alt="Internship at Modern Technologies" />
+            <div class="carousel-caption glass-panel">
+              <h3>Internship to Career Pipeline</h3>
+              <p>Mentored internships, mock interviews, and placement readiness.</p>
+              <a href="#internship" class="btn btn-primary btn-premium btn-sm">Start Internship</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <header class="hero-section section-pad" id="home">
+      <div class="hero-gradient"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-7 text-center text-lg-start">
+            <p class="hero-tagline reveal">Tirunelveli Town, Tamil Nadu</p>
+            <h1 class="hero-title reveal">
+              Build Your Future with
+              <span id="typingText" class="text-gradient"></span>
+            </h1>
+            <p class="hero-subtitle reveal">
+              A premium learning ecosystem designed for job-ready skills, cutting-edge
+              internships, and real-world tech project execution.
+            </p>
+            <div class="hero-actions reveal">
+              <a href="#courses" class="btn btn-primary btn-premium me-2 mb-2">Explore Courses</a>
+              <a href="#contact" class="btn btn-outline-light btn-premium mb-2">Book Free Demo</a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-float-wrap reveal">
+              <a class="float-card" href="#courses" data-jump="courses"><i class="fa-solid fa-code"></i> Full Stack</a>
+              <a class="float-card" href="#projects" data-jump="projects"><i class="fa-solid fa-robot"></i> AI & ML</a>
+              <a class="float-card" href="#internship" data-jump="internship"><i class="fa-solid fa-shield-halved"></i> Cyber Security</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-indicator" href="#about">
+        <span></span>
+      </a>
+    </header>
+
+    <section id="about" class="section-pad">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6 reveal">
+            <div class="glass-panel about-image-wrap">
+              <img
+                src="images/about/malar-software-solutions-scad-mou-tirunelveli.jpg"
+                class="img-fluid rounded-4"
+                alt="Students in technology lab"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <h2 class="section-title">About Modern Technologies</h2>
+            <p class="section-subtitle">
+              We blend design thinking, practical training, and industry mentorship to craft
+              confident technology professionals.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-4">
+                <div class="counter-box glass-panel">
+                  <h3 class="counter" data-target="5000">0</h3>
+                  <p>Students</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="counter-box glass-panel">
+                  <h3 class="counter" data-target="48">0</h3>
+                  <p>Courses</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="counter-box glass-panel">
+                  <h3 class="counter" data-target="96">0</h3>
+                  <p>Success %</p>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3 mt-3">
+              <div class="col-md-6">
+                <div class="glass-panel p-3 h-100 hover-lift">
+                  <h5><i class="fa-solid fa-bullseye me-2"></i>Vision</h5>
+                  <p class="mb-0">To become South India's most trusted premium tech upskilling hub.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="glass-panel p-3 h-100 hover-lift">
+                  <h5><i class="fa-solid fa-rocket me-2"></i>Mission</h5>
+                  <p class="mb-0">Deliver deeply practical training with placement-focused outcomes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section-pad">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Our Premium Courses</h2>
+          <p class="section-subtitle">Industry-grade curriculum designed with modern learning paths.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="course-card glass-panel">
+              <i class="fa-solid fa-laptop-code card-icon"></i>
+              <h4>Full Stack Development</h4>
+              <p>MERN + deployment, API architecture, and product-ready projects.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="course-card glass-panel">
+              <i class="fa-solid fa-brain card-icon"></i>
+              <h4>Data Science & AI</h4>
+              <p>Python, ML pipelines, model building, and visual intelligence tools.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="course-card glass-panel">
+              <i class="fa-solid fa-cloud card-icon"></i>
+              <h4>Cloud & DevOps</h4>
+              <p>AWS foundations, CI/CD automation, containers, and scalable ops.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="course-card glass-panel">
+              <i class="fa-solid fa-mobile-screen card-icon"></i>
+              <h4>App Development</h4>
+              <p>Cross-platform mobile app design with real deployment workflow.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="course-card glass-panel">
+              <i class="fa-solid fa-shield card-icon"></i>
+              <h4>Cyber Security</h4>
+              <p>Hands-on ethical hacking basics, secure systems, and threat analysis.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="course-card glass-panel">
+              <i class="fa-solid fa-chart-line card-icon"></i>
+              <h4>Digital Marketing Tech</h4>
+              <p>Growth frameworks, analytics, automation, and brand performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="internship" class="section-pad">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Internship Journey</h2>
+          <p class="section-subtitle">A guided path from beginner to deployment-ready intern.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="badge-glow">Step 1</span>
+            <h5>Skill Foundation</h5>
+            <p>Rapid bootcamp to align your fundamentals with industry standards.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="badge-glow">Step 2</span>
+            <h5>Mentored Sprint</h5>
+            <p>Weekly sprint-based assignments with mentor code reviews and feedback.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="badge-glow">Step 3</span>
+            <h5>Live Project Role</h5>
+            <p>Work on collaborative client-like tasks and portfolio-grade outcomes.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="badge-glow">Step 4</span>
+            <h5>Career Readiness</h5>
+            <p>Mock interviews, profile polishing, and placement mentorship sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Student Projects</h2>
+          <p class="section-subtitle">Portfolio-grade solutions built with modern engineering patterns.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <img src="images/projects/malar-software-solutions-scad-viva-1.jpg" alt="Project analytics dashboard" />
+            <div class="project-overlay"><h5>Analytics Dashboard</h5><p>React + API + Charts</p></div>
+          </article>
+          <article class="project-card reveal">
+            <img src="images/projects/malar-software-solutions-scad-viva-2.jpg" alt="Project security monitor" />
+            <div class="project-overlay"><h5>Security Monitor</h5><p>Threat Detection UI</p></div>
+          </article>
+          <article class="project-card reveal">
+            <img src="images/projects/malar-software-solutions-scad-viva-3.jpg" alt="Project collaboration app" />
+            <div class="project-overlay"><h5>Collab Platform</h5><p>Realtime Team Workspace</p></div>
+          </article>
+          <article class="project-card reveal">
+            <img src="images/projects/service.png" alt="Project cloud architecture" />
+            <div class="project-overlay"><h5>Cloud Infra Kit</h5><p>DevOps Automation Stack</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section-pad">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Campus Gallery</h2>
+          <p class="section-subtitle">A quick visual walk-through of our creative learning environment.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 reveal">
+            <div class="gallery-item" data-img="images/gallery/image-1.jpg">
+              <img src="images/gallery/image-1.jpg" alt="Classroom session" />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 reveal">
+            <div class="gallery-item" data-img="images/gallery/image-2.jpg">
+              <img src="images/gallery/image-2.jpg" alt="Coding training session" />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 reveal">
+            <div class="gallery-item" data-img="images/gallery/image-3.jpg">
+              <img src="images/gallery/image-3.jpg" alt="Mentor guidance" />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 reveal">
+            <div class="gallery-item" data-img="images/gallery/image-7.jpg">
+              <img src="images/gallery/image-7.jpg" alt="Lab work" />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 reveal">
+            <div class="gallery-item" data-img="images/gallery/image-9.jpg">
+              <img src="images/gallery/image-9.jpg" alt="Presentation room" />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 reveal">
+            <div class="gallery-item" data-img="images/gallery/image10.jpg">
+              <img src="images/gallery/image10.jpg" alt="Student celebration" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad pt-0">
+      <div class="container">
+        <div class="testimonials glass-panel reveal">
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <blockquote>
+                  "The internship flow felt truly industry-like. I got placed within 3 months."
+                </blockquote>
+                <h6>- Aadhil, Full Stack Graduate</h6>
+              </div>
+              <div class="carousel-item">
+                <blockquote>
+                  "Mentor guidance, project reviews, and mock interviews gave me confidence."
+                </blockquote>
+                <h6>- Priya, Data Science Learner</h6>
+              </div>
+              <div class="carousel-item">
+                <blockquote>
+                  "Best tech training atmosphere in Tirunelveli with premium infrastructure."
+                </blockquote>
+                <h6>- Harish, Internship Trainee</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad pt-0">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="accordion custom-accordion reveal" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                Do you provide placement support?
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, we provide interview prep, resume optimization, and job referrals.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                Are classes practical or theory-based?
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">We are project-first. Every module includes practical implementation work.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                Can beginners join?
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Absolutely. Foundation tracks are designed for freshers and career switchers.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6 reveal">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">
+              Visit our campus in Tirunelveli Town and start your tech journey with confidence.
+            </p>
+            <form class="glass-panel p-4 contact-form" id="contactForm">
+              <div class="floating-group">
+                <input type="text" id="name" required />
+                <label for="name">Full Name</label>
+              </div>
+              <div class="floating-group">
+                <input type="email" id="email" required />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="floating-group">
+                <textarea id="message" rows="4" required></textarea>
+                <label for="message">Your Message</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-premium w-100" id="submitBtn">
+                <span class="btn-label">Send Enquiry</span>
+                <span class="btn-loader"></span>
+              </button>
+            </form>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="glass-panel p-3 h-100">
+              <iframe
+                title="Tirunelveli map"
+                src="https://www.google.com/maps?q=Tirunelveli%20Town%2C%20Tamil%20Nadu&output=embed"
+                style="width: 100%; min-height: 420px; border: 0; border-radius: 1rem"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 text-center">
+      <p class="mb-0">© 2026 Modern Technologies, Tirunelveli Town. All rights reserved.</p>
+    </footer>
+
+    <button id="toTopBtn" class="to-top-btn" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a
+      href="https://wa.me/919000000000"
+      target="_blank"
+      rel="noreferrer"
+      class="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <img id="lightboxImage" src="" alt="Gallery preview" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
